@@ -1,4 +1,4 @@
-# ETH-VAMR-Nomenclature
+# CV-Nomenclature
 ### Build
 ```
 pdflatex glossary
