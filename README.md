@@ -1,4 +1,4 @@
-# CV-Nomenclature
+# Nomenclature-CV
 
 ### How to use
 
