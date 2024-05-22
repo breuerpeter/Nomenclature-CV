@@ -1,74 +1,74 @@
 % Encoding: UTF-8
 
-@symbol{bodyFrame,
+@symbol{frameBody,
     name = {\ensuremath{\mathcal{B}}},
     description = {body reference frame},
     identifier = {visualInertialFusion}
 }
 
-@symbol{angVelMeas_InBodyFrame,
+@symbol{angVelMeas_frBody,
     name = {\ensuremath{\tilde{\boldsymbol{\omega}}}},
-    description = {angular velocity measurement (expressed in \gls{bodyFrame})},
+    description = {angular velocity measurement (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{linVelMeas_InBodyFrame,
+@symbol{linVelMeas_frBody,
     name = {\ensuremath{\tilde{\mathbf{a}}}},
-    description = {linear acceleration measurement (expressed in \gls{bodyFrame})},
+    description = {linear acceleration measurement (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{imuMeasInterval_InBodyFrame,
+@symbol{imuMeasInterval_frBody,
     name = {\ensuremath{\mathbf{u}=\{\tilde{\boldsymbol{\omega}},\tilde{\mathbf{a}}\}}},
-    description = {IMU measurements in time interval $[t_{k-1},\gls{timeK}]$ (expressed in \gls{bodyFrame})},
+    description = {IMU measurements in time interval $[t_{k-1},\gls{timeK}]$ (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{angVel_InBodyFrame,
+@symbol{angVel_frBody,
     name = {\ensuremath{\boldsymbol{\omega}}},
-    description = {angular velocity (true value) (expressed in \gls{bodyFrame})},
+    description = {angular velocity (true value) (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{linVel_InBodyFrame,
+@symbol{linVel_frBody,
     name = {\ensuremath{\mathbf{a}}},
-    description = {linear acceleration (true value) (expressed in \gls{bodyFrame})},
+    description = {linear acceleration (true value) (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{biasGyro_InBodyFrame,
+@symbol{biasGyro_frBody,
     name = {\ensuremath{\mathbf{b}^G}},
-    description = {gyroscope bias (expressed in \gls{bodyFrame})},
+    description = {gyroscope bias (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{biasAccel_InBodyFrame,
+@symbol{biasAccel_frBody,
     name = {\ensuremath{\mathbf{b}^A}},
-    description = {accelerometer bias (expressed in \gls{bodyFrame})},
+    description = {accelerometer bias (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{noiseGyro_InBodyFrame,
+@symbol{noiseGyro_frBody,
     name = {\ensuremath{\mathbf{n}^G}},
-    description = {gyroscope additive zero-mean Gaussian white noise (expressed in \gls{bodyFrame})},
+    description = {gyroscope additive zero-mean Gaussian white noise (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{noiseAccel_InBodyFrame,
+@symbol{noiseAccel_frBody,
     name = {\ensuremath{\mathbf{n}^A}},
-    description = {accelerometer additive zero-mean Gaussian white noise (expressed in \gls{bodyFrame})},
+    description = {accelerometer additive zero-mean Gaussian white noise (expressed in \gls{frameBody})},
     identifier = {visualInertialFusion}
 }
 
 @symbol{PsvRotWtoB,
     name = {\ensuremath{\mathbf{R}_\mathcal{BW}}},
-    description = {passive rotation from \gls{worldFrame} to \gls{bodyFrame}},
+    description = {passive rotation from \gls{frameWorld} to \gls{frameBody}},
     identifier = {visualInertialFusion}
 }
 
-@symbol{accelGrav_InWorldFrame,
+@symbol{accelGrav_frWorld,
     name = {\ensuremath{\mathbf{g}}},
-    description = {gravity vector (expressed in \gls{worldFrame})},
+    description = {gravity vector (expressed in \gls{frameWorld})},
     identifier = {visualInertialFusion}
 }
 
@@ -78,27 +78,27 @@
     identifier = {visualInertialFusion}
 }
 
-@symbol{pos_InWorldFrame,
+@symbol{pos_frWorld,
     name = {\ensuremath{\mathbf{p}}},
-    description = {Position (expressed in \gls{worldFrame})},
+    description = {Position (expressed in \gls{frameWorld})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{att_InWorldFrame,
+@symbol{att_frWorld,
     name = {\ensuremath{\mathbf{q}}},
     description = {orientation/attitude of IMU (rotation $\mathbf{R}_\mathcal{WB}$)},
     identifier = {visualInertialFusion}
 }
 
-@symbol{vel_InWorldFrame,
+@symbol{vel_frWorld,
     name = {\ensuremath{\mathbf{v}}},
-    description = {velocity (expressed in \gls{worldFrame})},
+    description = {velocity (expressed in \gls{frameWorld})},
     identifier = {visualInertialFusion}
 }
 
-@symbol{stateEst_InWorldFrame,
+@symbol{stateEst_frWorld,
     name = {\ensuremath{\mathbf{x}=[\mathbf{p}\ \mathbf{q}\ \mathbf{v}]^\top}},
-    description = {state estimate (expressed in \gls{worldFrame})},
+    description = {state estimate (expressed in \gls{frameWorld})},
     identifier = {visualInertialFusion}
 }
 
@@ -114,7 +114,7 @@
     identifier = {visualInertialFusion}
 }
 
-@symbol{stateEstSet_InWorldFrame,
+@symbol{stateEstSet_frWorld,
     name = {\ensuremath{\mathbf{X}=\{\mathbf{x}_k\}}},
     description = {Set of state estimates at times \gls{timeK}, $k=1,\dots,N$},
     identifier = {visualInertialFusion}
@@ -140,7 +140,7 @@
 
 @symbol{landmarksSet,
     name = {\ensuremath{\mathbf{L}=\{\mathbf{L}^i\}}},
-    description = {Set of 3D landmarks (expressed in \gls{worldFrame}), $i=1,\dots,M$},
+    description = {Set of 3D landmarks (expressed in \gls{frameWorld}), $i=1,\dots,M$},
     identifier = {visualInertialFusion}
 }
 
@@ -158,6 +158,6 @@
 
 @symbol{TODO,
     name = {\ensuremath{\pi(\mathbf{x}_k,\mathbf{L}^i)}},
-    description = {perspective projection of $\mathbf{L}^i$ onto image plane (expressed in \gls{cameraFrame} defined by $\mathbf{x}_k$)},
+    description = {perspective projection of $\mathbf{L}^i$ onto image plane (expressed in \gls{frameCamera} defined by $\mathbf{x}_k$)},
     identifier = {visualInertialFusion}
 }

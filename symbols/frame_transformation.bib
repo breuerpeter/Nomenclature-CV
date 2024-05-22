@@ -1,12 +1,12 @@
 % Encoding: UTF-8
 
-@symbol{worldFrame,
+@symbol{frameWorld,
     name = {\ensuremath{\mathcal{\color{blue}W}}},
     description = {fixed, stationary world reference frame},
     identifier = {frameTransformation}
 }
 
-@symbol{cameraFrame,
+@symbol{frameCamera,
     name = {\ensuremath{\mathcal{\color{red}C}}},
     description = {potentially moving camera reference frame},
     identifier = {frameTransformation}
@@ -24,39 +24,39 @@
     identifier = {frameTransformation}
 }
 
-@symbol{point3D,
+@symbol{pt3D,
     name = {\ensuremath{P}},
     description = {arbitrary point in 3D},
     identifier = {frameTransformation}
 }
 
-@symbol{point3D_InFrameA,
+@symbol{pt3D_frA,
     name = {\ensuremath{_\mathcal{A}\mathbf{P}}},
-    description = {coordinate vector of \gls{point3D} (expressed in \gls{frameA})},
+    description = {coordinate vector of \gls{pt3D} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
 }
 
-@symbol{point3D_InFrameA_X,
+@symbol{pt3D_compX_frA,
     name = {\ensuremath{X^\mathcal{A}}},
-    description = {x coordinate of \gls{point3D_InFrameA}},
+    description = {x coordinate of \gls{pt3D_frA}},
     identifier = {frameTransformation}
 }
 
-@symbol{point3D_frameA_Y,
+@symbol{pt3D_compY_frA,
     name = {\ensuremath{Y^\mathcal{A}}},
-    description = {y coordinate of \gls{point3D_InFrameA}},
+    description = {y coordinate of \gls{pt3D_frA}},
     identifier = {frameTransformation}
 }
 
-@symbol{point3D_InFrameA_Z,
+@symbol{pt3D_compZ_frA,
     name = {\ensuremath{Z^\mathcal{A}}},
-    description = {z coordinate of \gls{point3D_InFrameA}},
+    description = {z coordinate of \gls{pt3D_frA}},
     identifier = {frameTransformation}
 }
 
-@symbol{point3D_InFrameA_Hom,
+@symbol{pt3D_hom_frA,
     name = {\ensuremath{_\mathcal{A}\tilde{\mathbf{P}}}},
-    description = {homogeneous coordinate vector of \gls{point3D} (expressed in \gls{frameA})},
+    description = {homogeneous coordinate vector of \gls{pt3D} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
 }
 
@@ -84,7 +84,7 @@
     identifier = {frameTransformation}
 }
 
-@symbol{TranslAtoB_InFrameA,
+@symbol{TranslAtoB_frA,
     name = {\ensuremath{_\mathcal{A}\mathbf{t}_\mathcal{AB}}},
     description = {translation from origin of \gls{frameA} to origin of \gls{frameB} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
@@ -96,19 +96,19 @@
     identifier = {frameTransformation}
 }
 
-@symbol{frameB_BasVecX_InFrameA,
+@symbol{frameB_BasVecX_frA,
     name = {\ensuremath{_\mathcal{A}\mathbf{e}_x^\mathcal{B}}},
     description = {x basis vector of \gls{frameB} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
 }
 
-@symbol{frameB_BasVecY_InFrameA,
+@symbol{frameB_BasVecY_frA,
     name = {\ensuremath{_\mathcal{A}\mathbf{e}_y^\mathcal{B}}},
     description = {y basis vector of \gls{frameB} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
 }
 
-@symbol{frameB_BasVecZ_InFrameA,
+@symbol{frameB_BasVecZ_frA,
     name = {\ensuremath{_\mathcal{A}\mathbf{e}_z^\mathcal{B}}},
     description = {z basis vector of \gls{frameB} (expressed in \gls{frameA})},
     identifier = {frameTransformation}
