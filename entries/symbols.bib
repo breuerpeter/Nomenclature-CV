@@ -4,11 +4,9 @@
 
 @symbol{frCam,
     name = {\ensuremath{\mathcal{\color{red}C}}},
-    description = {potentially moving camera reference frame},
+    description = {camera reference frame (potentially moving)},
     identifier = {referenceFrames}
 }
-
-
 
 # Image formation
 
@@ -36,27 +34,9 @@
     identifier = {imageFormation}
 }
 
-@symbol{distCtoFocalPlane,
-    name = {\ensuremath{e}},
-    description = {distance from $C$ to focal plane},
-    identifier = {imageFormation}
-}
-
-@symbol{objectDistance,
-    name = {\ensuremath{Z}},
-    description = {object distance},
-    identifier = {imageFormation}
-}
-
-@symbol{distFocalPlanetoImagePlane,
-    name = {\ensuremath{\delta}},
-    description = {distance from focal plane to image plane},
-    identifier = {imageFormation}
-}
-
 @symbol{aperture,
     name = {\ensuremath{L}},
-    description = {size of aperture},
+    description = {aperture},
     identifier = {imageFormation}
 }
 
@@ -66,57 +46,33 @@
     identifier = {imageFormation}
 }
 
-@symbol{pt2D,
+@symbol{pt3d,
+    name = {\ensuremath{P}},
+    description = {arbitrary point in 3D space},
+    identifier = {imageFormation}
+}
+
+@symbol{pt2d,
     name = {\ensuremath{p}},
-    description = {$P$ projected onto image plane},
+    description = {\gls{pt3d} projected onto image plane},
     identifier = {imageFormation}
 }
 
-@symbol{pt2D_compX_frImage,
-    name = {\ensuremath{x}},
-    description = {x coordinate $p$ (expressed in image frame)},
+@symbol{pt2dRect,
+    name = {\ensuremath{p'}},
+    description = {\gls{pt3d} projected onto rectified image plane},
     identifier = {imageFormation}
 }
 
-@symbol{pt2D_compY_frImage,
-    name = {\ensuremath{x}},
-    description = {y coordinate $p$ (expressed in image frame)},
+@symbol{vecPt2d_frPixel,
+    name = {\ensuremath{\bm{p}}},
+    description = {pixel frame position vector of \gls{pt2d}},
     identifier = {imageFormation}
 }
 
-@symbol{pt2D_frPixel,
-    name = {\ensuremath{\mathbf{p}=[u\ v]^\top}},
-    description = {coordinate vector of $p$ (expressed in pixel frame)},
-    identifier = {imageFormation}
-}
-
-@symbol{pt2D_norm_frPixel,
-    name = {\ensuremath{\bar{\mathbf{p}}=[\bar{u}\ \bar{v}]^\top}},
-    description = {unit-plane normalized coordinate vector of $p$ (expressed in pixel frame)},
-    identifier = {imageFormation}
-}
-
-@symbol{pt2D_hom_frPixel,
-    name = {\ensuremath{\tilde{\mathbf{p}}}},
-    description = {homogeneous coordinate vector of $p$ (expressed in pixel frame)},
-    identifier = {imageFormation}
-}
-
-@symbol{pt2D_homNorm1_frPixel,
-    name = {\ensuremath{\tilde{\bar{\mathbf{p}}}}},
-    description = {homogeneous unit-plane normalized coordinate vector of $p$ (expressed in pixel frame)},
-    identifier = {imageFormation}
-}
-
-@symbol{principalPoint_compU_frImage,
-    name = {\ensuremath{u_O}},
-    description = {horizontal coordinate of \gls{principalPoint} (expressed in image frame)},
-    identifier = {imageFormation}
-}
-
-@symbol{principalPoint_compV_frImage,
-    name = {\ensuremath{v_O}},
-    description = {vertical coordinate of \gls{principalPoint} (expressed in image frame)},
+@symbol{vecPt2d_frPixel_norm,
+    name = {\ensuremath{\bar{\bm{p}}}},
+    description = {pixel frame position vector of \gls{pt2d} with unit-plane normalized coordinates},
     identifier = {imageFormation}
 }
 
@@ -132,23 +88,17 @@
     identifier = {imageFormation}
 }
 
-@symbol{focalLength_inPixels,
-    name = {\ensuremath{\alpha_u,\alpha_v}},
-    description = {focal lengths expressed in pixels},
-    identifier = {imageFormation}
-}
-
 @symbol{matK,
-    name = {\ensuremath{\mathbf{K}}},
+    name = {\ensuremath{\bm{K}}},
     description = {calibration/intrinsic parameter matrix},
     identifier = {imageFormation}
 }
 
 # Calibration
 
-@symbol{homography,
-    name = {\ensuremath{\mathbf{H}}},
-    description = {homography},
+@symbol{matHomography,
+    name = {\ensuremath{\bm{H}}},
+    description = {homography matrix},
     identifier = {calibration}
 }
 
@@ -156,138 +106,102 @@
 
 @symbol{baseline,
     name = {\ensuremath{b}},
-    description = {baseline},
+    description = {\gls{DEF_baseline}},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{indicesCameraLeftRight,
-    name = {\ensuremath{(\cdot)_{l,r}}},
-    description = {indices for left and right camera},
+@symbol{vecPt2dRect_frPixel,
+    name = {\ensuremath{\bm{p}'}},
+    description = {pixel frame position vector of \gls{pt2dRect}},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{pt2D_rect_frPixel,
-    name = {\ensuremath{\mathbf{p}'}},
-    description = {coordinate vector of $P$ projected on rectified image plane (expressed in pixel frame)},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{pt2D_homRect_frPixel,
-    name = {\ensuremath{\tilde{\mathbf{p}}'}},
-    description = {homogeneous coordinate vector of $P$ projected on rectified image plane (expressed in pixel frame)},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{pt2D_homNorm2_frPixel,
-    name = {\ensuremath{\bar{\mathbf{p}}\equiv\ _{\color{red}\mathcal{C}}\mathbf{p}}},
-    description = {homogeneous unit-plane normalized coordinate vector of $p$ (expressed in pixel frame)},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{epipole,
-    name = {\ensuremath{\mathbf{e}_l}},
+@symbol{ptEpipole,
+    name = {\ensuremath{e}},
     description = {epipole},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{opticalCenter_frWorld,
-    name = {\ensuremath{_{\color{blue}\mathcal{W}}\mathbf{C}}},
-    description = {coordinate vectors of \gls{opticalCenter} (expressed in \gls{frWorld})},
+@symbol{vecEpipolarPlaneNormal,
+    name = {\ensuremath{\bm{n}}},
+    description = {epipolar plane normal vector},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{epipolarPlaneNormal,
-    name = {\ensuremath{\mathbf{n}}},
-    description = {epipolar plane normal},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{essentialMat,
-    name = {\ensuremath{\mathbf{E}}},
+@symbol{matEssential,
+    name = {\ensuremath{\bm{E}}},
     description = {essential matrix},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{fundamentalMat,
-    name = {\ensuremath{\mathbf{F}}},
+@symbol{matFundamental,
+    name = {\ensuremath{\bm{F}}},
     description = {fundamental matrix},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{pt2D_norm1_frPixel,
-    name = {\ensuremath{\hat{\mathbf{p}}}},
-    description = {Normalized (to range $[-1,1]\times[-1,1]$) coordinate vector of $p$ (expressed in pixel frame)},
+@symbol{vecPt2d_norm_frPixel,
+    name = {\ensuremath{\hat{\bm{p}}}},
+    description = {pixel frame position vector of \gls{pt2d} with coordinates normalized to range $[-1,1]\times[-1,1]$},
     identifier = {multipleViewGeometry}
 }
 
-@symbol{cameraPose_timeK,
-    name = {\ensuremath{\mathbf{C}_k}},
-    description = {camera pose at time $k$},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{noViewsSFM,
-    name = {\ensuremath{n}},
-    description = {number of views in $n$-view SFM},
-    identifier = {multipleViewGeometry}
-}
-
-@symbol{no3DPtsSFM,
-    name = {\ensuremath{N}},
-    description = {number of (3D) points in SFM},
+@symbol{matPoseCam,
+    name = {\ensuremath{\bm{C}}},
+    description = {camera pose (homogeneous transf.) matrix; composed of $\gls{matPsvRot}_{\gls{frCam}\gls{frW}}$ and $_{\gls{frCam}}\gls{vecTransl}_{\gls{frCam}\gls{frW}}$},
     identifier = {multipleViewGeometry}
 }
 
 # Tracking
 
-@symbol{intensityTemplateXY,
-    name = {\ensuremath{\mathbf{T}[x,y]}},
-    description = {intensity of template image at pixel $(x,y)$},
+@symbol{matIntensityTemplate,
+    name = {\ensuremath{\bm{T}}},
+    description = {pixel intensity matrix of template},
     identifier = {tracking}
 }
 
-@symbol{feature2D,
-    name = {\ensuremath{\mathbf{f}^i}},
-    description = {observed feature position in current image (at position $\mathbf{x}^i$ in template)},
+@symbol{vecfeature2d,
+    name = {\ensuremath{\bm{f}}},
+    description = {2D feature position vector (at position $\bm{x}$ in template)},
     identifier = {tracking}
 }
 
-@symbol{warpTemplate,
-    name = {\ensuremath{\mathbf{W}(\mathbf{x};\mathbf{p})}},
-    description = {transformation (warp parameterized by $\mathbf{p}$) of template point $\mathbf{x}$},
+@symbol{matWarp,
+    name = {\ensuremath{\bm{W}}},
+    description = {transformation (warp)},
     identifier = {tracking}
 }
 
 # Filtering
 
-@symbol{intensityXY,
-    name = {\ensuremath{\mathbf{I}[x,y]}},
-    description = {intensity of original image pixel $(x,y)$},
+@symbol{matIntensity,
+    name = {\ensuremath{\bm{I}}},
+    description = {pixel intensity matrix of original image},
     identifier = {filtering}
 }
 
-@symbol{intensityFilteredXY,
-    name = {\ensuremath{\mathbf{I}'[x,y]}},
-    description = {intensity of filtered image pixel $(x,y)$},
+@symbol{matIntensityFilt,
+    name = {\ensuremath{\bm{I}'}},
+    description = {pixel intensity matrix of filtered image},
     identifier = {filtering}
 }
 
-@symbol{filterUV,
-    name = {\ensuremath{\mathbf{H}[u,v]}},
-    description = {filter/kernel/mask/template},
+@symbol{matFilter,
+    name = {\ensuremath{\bm{H}}},
+    description = {filter/kernel/mask/template matrix},
     identifier = {filtering}
 }
 
-@symbol{filterGaussian,
-    name = {\ensuremath{\mathbf{G}_\sigma}},
-    description = {Gaussian filter},
+@symbol{matGaussianFilter,
+    name = {\ensuremath{\bm{G}_\sigma}},
+    description = {Gaussian filter with smoothing/blurring parameter $\sigma$},
     identifier = {filtering}
 }
 
 # Feature detection
 
-@symbol{secondMomentMat,
-    name = {\ensuremath{\mathbf{M}}},
+@symbol{matSecondMoment,
+    name = {\ensuremath{\bm{M}}},
     description = {second moment matrix},
     identifier = {featureDetection}
 }
@@ -304,172 +218,13 @@
     identifier = {featureDetection}
 }
 
-# Feature matching
-
-@symbol{noLayersSIFT,
-    name = {\ensuremath{s}},
-    description = {number of layers per scale octave (SIFT)},
-    identifier = {featureMatching}
-}
-
-@symbol{distClosestDescriptor,
-    name = {\ensuremath{d_1}},
-    description = {distance from closest descriptor},
-    identifier = {featureMatching}
-}
-
-@symbol{distSecondClosestDescriptor,
-    name = {\ensuremath{d_2}},
-    description = {distance from second closest descriptor},
-    identifier = {featureMatching}
-}
-
 # Visual inertial fusion
 
-@symbol{angVelMeas_frBody,
-    name = {\ensuremath{\tilde{\boldsymbol{\omega}}}},
-    description = {angular velocity measurement (expressed in \gls{frBody})},
+@symbol{vecLandmark,
+    name = {\ensuremath{\bm{L}}},
+    description = {landmark},
     identifier = {visualInertialFusion}
 }
-
-@symbol{linVelMeas_frBody,
-    name = {\ensuremath{\tilde{\mathbf{a}}}},
-    description = {linear acceleration measurement (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{imuMeasInterval_frBody,
-    name = {\ensuremath{\mathbf{u}=\{\tilde{\boldsymbol{\omega}},\tilde{\mathbf{a}}\}}},
-    description = {IMU measurements in time interval $[t_{k-1},\gls{timeK}]$ (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{angVel_frBody,
-    name = {\ensuremath{\boldsymbol{\omega}}},
-    description = {angular velocity (true value) (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{linVel_frBody,
-    name = {\ensuremath{\mathbf{a}}},
-    description = {linear acceleration (true value) (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{biasGyro_frBody,
-    name = {\ensuremath{\mathbf{b}^G}},
-    description = {gyroscope bias (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{biasAccel_frBody,
-    name = {\ensuremath{\mathbf{b}^A}},
-    description = {accelerometer bias (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{noiseGyro_frBody,
-    name = {\ensuremath{\mathbf{n}^G}},
-    description = {gyroscope additive zero-mean Gaussian white noise (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{noiseAccel_frBody,
-    name = {\ensuremath{\mathbf{n}^A}},
-    description = {accelerometer additive zero-mean Gaussian white noise (expressed in \gls{frBody})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{stdBiasDeriv,
-    name = {\ensuremath{\sigma_b}},
-    description = {standard deviation of zero-mean Gaussian noise bias derivative},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{pos_frWorld,
-    name = {\ensuremath{\mathbf{p}}},
-    description = {Position (expressed in \gls{frWorld})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{att_frWorld,
-    name = {\ensuremath{\mathbf{q}}},
-    description = {orientation/attitude of IMU (rotation $\mathbf{R}_\mathcal{WB}$)},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{vel_frWorld,
-    name = {\ensuremath{\mathbf{v}}},
-    description = {velocity (expressed in \gls{frWorld})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{stateEst_frWorld,
-    name = {\ensuremath{\mathbf{x}=[\mathbf{p}\ \mathbf{q}\ \mathbf{v}]^\top}},
-    description = {state estimate (expressed in \gls{frWorld})},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{noCamPoses,
-    name = {\ensuremath{N}},
-    description = {number of camera poses/state estimates},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{noLandmarks,
-    name = {\ensuremath{M}},
-    description = {number of landmarks/features},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{stateEstSet_frWorld,
-    name = {\ensuremath{\mathbf{X}=\{\mathbf{x}_k\}}},
-    description = {set of state estimates at times \gls{timeK}, $k=1,\dots,N$},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{stateCov,
-    name = {\ensuremath{\mathbf{\Lambda}_k}},
-    description = {covariance of $\mathbf{x}_k$ at time \gls{timeK}},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{timeK,
-    name = {\ensuremath{t_k}},
-    description = {time at iteration $k$},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{idxk,
-    name = {\ensuremath{(\cdot)_k}},
-    description = {index for \gls{timeK}},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{landmarksSet,
-    name = {\ensuremath{\mathbf{L}=\{\mathbf{L}^i\}}},
-    description = {Set of 3D landmarks (expressed in \gls{frWorld}), $i=1,\dots,M$},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{features2D,
-    name = {\ensuremath{\mathbf{z}^i}},
-    description = {observed (2D) features, $i=1,\dots,M$},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{featureCov,
-    name = {\ensuremath{\mathbf{\Sigma}_k^i}},
-    description = {covariance of \gls{feature2D} at time \gls{timeK}},
-    identifier = {visualInertialFusion}
-}
-
-@symbol{TODO,
-    name = {\ensuremath{\pi(\mathbf{x}_k,\mathbf{L}^i)}},
-    description = {perspective projection of $\mathbf{L}^i$ onto image plane (expressed in \gls{frCam} defined by $\mathbf{x}_k$)},
-    identifier = {visualInertialFusion}
-}
-
 # Event based vision
 
 @symbol{contrastSensitivity,
